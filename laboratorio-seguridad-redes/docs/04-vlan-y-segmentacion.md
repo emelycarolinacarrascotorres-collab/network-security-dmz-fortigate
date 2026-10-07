@@ -25,4 +25,3 @@ Movimiento lateral entre departamentos y *VLAN hopping* (el troncal solo transpo
 ## Resultado
 Los clientes reciben direccionamiento de su VLAN ([10](10-dhcp.md)) y las políticas distinguen VLAN 10 de VLAN 20 ([07](07-politicas-firewall.md)).
 
-> ℹ️ Las capturas de trunk/VLAN muestran el prompt `Switch#` (previo a asignar el hostname `SWITCH-USERS`). Ver [14](14-hallazgos-y-pendientes.md).
