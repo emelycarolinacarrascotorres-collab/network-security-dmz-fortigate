@@ -5,4 +5,3 @@
 - El **SSH queda reservado a VLAN 20**: VLAN 10 fue bloqueada y VLAN 20 accedió a los tres servidores.
 - El acceso de VLAN 10 al **Inventario** se bloquea con *Web Filter* (capa 7), con página de bloqueo y log como prueba; el resto de puertos hacia la DMZ (HTTPS, SSH) lo cierra `VLAN10-DMZ-DENY`.
 - Los **switches** aplican seguridad de capa 2 básica (port-security sticky, BPDU Guard, troncal acotado, SSH v2) que se evidenció con violaciones registradas.
-- **Mejoras identificadas** (no aplicadas, para no alterar el laboratorio entregado): quitar NAT en las políticas hacia la DMZ para conservar la IP origen en los servidores, cerrar la administración HTTP/HTTPS/SSH en interfaces de usuario/WAN, deshabilitar `ip http server` en switches, añadir DHCP Snooping/DAI y usar llaves SSH. Detalle en [14](14-hallazgos-y-pendientes.md).
