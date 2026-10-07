@@ -36,4 +36,3 @@
 | VLAN20-SSH-DMZ | Administración desde segmento no autorizado |
 | VLAN10-INVENTARIO-BLOCK | Acceso de usuarios al sistema de existencias |
 
-Observaciones de endurecimiento sobre estas políticas: [14](14-hallazgos-y-pendientes.md).
