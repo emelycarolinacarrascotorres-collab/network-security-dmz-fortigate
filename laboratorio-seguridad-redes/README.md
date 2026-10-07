@@ -79,8 +79,6 @@ Detalle (origen, destino, servicio, evidencia, conclusión): [11 · Pruebas de s
 | DMZ | Endpoints de actualización | `SVC_UPDATES` | ✅ | `DMZ-to-WAN-UPDATES` |
 | DMZ | Internet | Cualquiera | ❌ | `DMZ-to-WAN-DENY` |
 
-> ⚠️ **Diferencia con el enunciado:** el bloqueo al Inventario usa *ACCEPT + Web Filter*, no un `DENY` directo. Ver [12](docs/12-resultados.md).
-
 ## 📚 Documentación
 
 | | | |
