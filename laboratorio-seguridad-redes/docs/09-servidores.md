@@ -26,4 +26,3 @@ Los tres servidores están en la DMZ `20.25.97.0/28`, gateway `20.25.97.1`. IP c
 - **Salida:** únicamente `GRP_UPDATES`.
 - **Switch:** MAC fija por puerto (port-security sticky).
 
-Los servidores aceptan autenticación SSH por usuario/contraseña (`admin0697`); ver [14](14-hallazgos-y-pendientes.md).
