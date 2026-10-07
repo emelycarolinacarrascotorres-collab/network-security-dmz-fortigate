@@ -89,7 +89,7 @@ Detalle (origen, destino, servicio, evidencia, conclusión): [11 · Pruebas de s
 | [04 VLAN](docs/04-vlan-y-segmentacion.md) | [05 DMZ](docs/05-dmz.md) | [06 FortiGate](docs/06-fortigate.md) |
 | [07 Políticas](docs/07-politicas-firewall.md) | [08 Switches](docs/08-seguridad-switches.md) | [09 Servidores](docs/09-servidores.md) |
 | [10 DHCP](docs/10-dhcp.md) | [11 Pruebas](docs/11-pruebas-de-seguridad.md) | [12 Resultados](docs/12-resultados.md) |
-| [13 Conclusiones](docs/13-conclusiones.md) | [**14 Hallazgos y pendientes**](docs/14-hallazgos-y-pendientes.md) | [Evidencias](evidence/README.md) |
+| [13 Conclusiones](docs/13-conclusiones.md)  | [Evidencias](evidence/README.md) |
 
 ## 🗂️ Estructura
 ```text
