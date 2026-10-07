@@ -8,7 +8,7 @@
 
 ## 🎥 Video demostrativo
 
-> ⏳ Enlace pendiente: [`video/video-demostrativo.md`](https://youtu.be/rwTNR78lhXo))
+> ⏳ Enlace: [`Laboratorio de Seguridad de Redes – DMZ y FortiGate-Emely Carrasco 2025-0697`](https://youtu.be/rwTNR78lhXo))
 
 ## 📌 Propósito del laboratorio
 Demostrar que una red segmentada puede aislar servidores en una **DMZ**, restringir su administración a una sola VLAN y bloquear el acceso a un sistema concreto, todo controlado por políticas de **FortiGate** (GUI) y reforzado con seguridad de capa 2 en los switches. Cada control tiene su evidencia y su prueba.
