@@ -21,5 +21,4 @@
 | Windows 10 en VLAN 10 | 20.25.6.11 (DHCP) | /25 | 20.25.6.1 | [captura](../evidence/ssh/vlan10-ssh-caja-bloqueado.png) |
 | Windows 10 en VLAN 20 | 20.25.6.139 (DHCP) | /25 | 20.25.6.129 | [captura](../evidence/ssh/vlan20-tcp22-tres-servidores.png) |
 
-> Los switches no muestran IP de gestión en los `running-config` (sin interfaz VLAN con IP). Se gestionan por consola.
-> Las redes `20.25.x.x` **no son RFC 1918**; es válido en un laboratorio aislado, pero en producción debe usarse espacio privado.
+
