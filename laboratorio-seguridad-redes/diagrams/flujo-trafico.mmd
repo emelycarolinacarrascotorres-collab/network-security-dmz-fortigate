@@ -1,0 +1,19 @@
+flowchart LR
+  V10["VLAN 10<br/>20.25.6.0/25"]
+  V20["VLAN 20<br/>20.25.6.128/25"]
+  DMZ["DMZ<br/>20.25.97.0/28"]
+  CAJA["Caja .2"]
+  INV["Inventario .3"]
+  ALL["Servidores .2 .3 .4"]
+  WAN(["Internet"])
+  UPD(["Endpoints de actualizacion"])
+  V10 -->|"OK HTTP/HTTPS - VLAN10-CAJA"| CAJA
+  V10 -->|"BLOQUEADO HTTP - web filter"| INV
+  V10 -->|"BLOQUEADO SSH - VLAN10-DMZ-DENY"| ALL
+  V10 -->|"OK - VLAN10-to-WAN"| WAN
+  V20 -->|"OK SSH - VLAN20-SSH-DMZ"| ALL
+  V20 -->|"OK HTTP/HTTPS - VLAN20-WEB-DMZ"| CAJA
+  V20 -->|"OK HTTP/HTTPS - VLAN20-WEB-DMZ"| INV
+  DMZ -->|"OK - DMZ-to-WAN-UPDATES"| UPD
+  DMZ -->|"BLOQUEADO - DMZ-to-WAN-DENY"| WAN
+  DMZ -->|"BLOQUEADO - DMZ-to-VLAN10/20-DENY"| V10

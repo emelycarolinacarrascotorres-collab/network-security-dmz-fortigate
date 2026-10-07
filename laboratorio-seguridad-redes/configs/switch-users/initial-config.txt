@@ -1,0 +1,36 @@
+SWITCH DE USUARIOS 
+
+vlan 10
+ name USUARIOS-10
+vlan 20
+ name USUARIOS-20
+ 
+!
+interface g0/0
+ description TRUNK-A-FORTIGATE
+ switchport trunk encapsulation dot1q
+ switchport mode trunk
+ switchport trunk allowed vlan 10,20
+ switchport nonegotiate
+!
+interface range g0/1
+ switchport mode access
+ switchport access vlan 10
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+ switchport port-security
+ switchport port-security maximum 2
+ switchport port-security violation restrict
+ switchport port-security mac-address sticky
+!
+interface range g0/2
+ switchport mode access
+ switchport access vlan 20
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+ switchport port-security
+ switchport port-security maximum 2
+ switchport port-security violation restrict
+ switchport port-security mac-address sticky
+!
+!

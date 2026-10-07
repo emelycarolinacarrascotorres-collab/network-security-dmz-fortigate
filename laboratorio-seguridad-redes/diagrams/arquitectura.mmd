@@ -1,0 +1,28 @@
+flowchart LR
+  WAN(["WINOTELECON / Internet<br/>WAN port1 192.168.42.138/24"])
+  FG{{"FortiGate (FortiGate7.0.9-1)<br/>port2 | port3 | port1"}}
+  MG["Nodo sin etiqueta<br/>enlace inferior de la topologia<br/>(port6 192.168.99.1/24 - por confirmar)"]
+  subgraph USERS["LAN USERS"]
+    SWU["SWITCH-USERS<br/>Gi0/0 trunk VLAN 10,20"]
+    H1["PC1 / windows10-1<br/>VLAN 10 Gi0/1 - VLAN 20 Gi0/2"]
+  end
+  subgraph DMZ["SERVIDORES - DMZ 20.25.97.0/28"]
+    SWD["SW-DMZ-0697<br/>Gi0/0 uplink a port3"]
+    CAJA["Caja-WEB<br/>20.25.97.2"]
+    INV["Inventario<br/>20.25.97.3"]
+    DB["db-server-lab-1<br/>20.25.97.4"]
+  end
+  WAN --- FG
+  FG ---|"port2 (VLAN 10 / VLAN 20)"| SWU
+  SWU --- H1
+  FG ---|"port3 DMZ-SERVER 20.25.97.1"| SWD
+  SWD ---|"Gi0/1"| CAJA
+  SWD ---|"Gi0/2"| DB
+  SWD ---|"Gi0/3"| INV
+  FG -.-|"por confirmar"| MG
+  classDef fw fill:#c0392b,color:#fff,stroke:#7b241c
+  classDef dmz fill:#d6f3ff,stroke:#2980b9
+  classDef usr fill:#d5f5e3,stroke:#1e8449
+  class FG fw
+  class SWD,CAJA,INV,DB dmz
+  class SWU,H1 usr

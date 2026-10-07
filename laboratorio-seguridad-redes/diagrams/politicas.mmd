@@ -1,0 +1,17 @@
+flowchart TB
+  subgraph L2["Capa 2 - Switches"]
+    A1["VLAN 10 / 20 + trunk 802.1Q (solo 10,20, nonegotiate)"]
+    A2["Port-security sticky + PortFast + BPDU Guard"]
+    A3["SSH v2 / login local / exec-timeout 5 min"]
+  end
+  subgraph L3["Capa 3-4 - FortiGate"]
+    B1["Interfaz port3 rol DMZ (solo PING administrativo)"]
+    B2["DMZ a VLAN 10/20: DENY"]
+    B3["DMZ a Internet: solo GRP_UPDATES, resto DENY"]
+    B4["SSH a DMZ: solo VLAN 20"]
+    B5["VLAN 10 a DMZ: solo Caja HTTP/HTTPS, resto DENY"]
+  end
+  subgraph L7["Capa 7 - UTM"]
+    C1["Web Filter WF_BLOQUEO_INVENTARIO (URL filter local)"]
+  end
+  L2 --> L3 --> L7

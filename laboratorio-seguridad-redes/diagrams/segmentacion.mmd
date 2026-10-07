@@ -1,0 +1,18 @@
+flowchart TB
+  FG{{"FortiGate"}}
+  subgraph P2["port2 - troncal 802.1Q"]
+    V10["VLAN 10 - Usuarios<br/>20.25.6.0/25<br/>GW 20.25.6.1<br/>DHCP .10 - .120"]
+    V20["VLAN 20 - Usuarios/Admin<br/>20.25.6.128/25<br/>GW 20.25.6.129<br/>DHCP .138 - .248"]
+  end
+  subgraph P3["port3 - DMZ-SERVER"]
+    D["DMZ 20.25.97.0/28<br/>GW 20.25.97.1<br/>.2 Caja / .3 Inventario / .4 DB"]
+  end
+  FG --- V10
+  FG --- V20
+  FG --- D
+  classDef v10 fill:#fdebd0,stroke:#d68910
+  classDef v20 fill:#d5f5e3,stroke:#1e8449
+  classDef dmz fill:#d6f3ff,stroke:#2980b9
+  class V10 v10
+  class V20 v20
+  class D dmz

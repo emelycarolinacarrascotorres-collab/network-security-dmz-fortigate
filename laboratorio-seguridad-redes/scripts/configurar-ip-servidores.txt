@@ -1,0 +1,20 @@
+Servidores conf
+
+
+Caja:
+ip addr flush dev eth0
+ip addr add 20.25.97.2/28 dev eth0
+ip link set eth0 up
+ip route add default via 20.25.97.1
+
+Inventario:
+ip addr flush dev eth0
+ip addr add 20.25.97.3/28 dev eth0
+ip link set eth0 up
+ip route add default via 20.25.97.1
+
+DB: 
+ip addr flush dev eth0
+ip addr add 20.25.97.4/28 dev eth0
+ip link set eth0 up
+ip route add default via 20.25.97.1

@@ -1,0 +1,19 @@
+flowchart LR
+  subgraph LAN["Redes internas"]
+    V10["VLAN 10"]
+    V20["VLAN 20"]
+  end
+  FG{{"FortiGate<br/>DMZ-SERVER (port3)"}}
+  subgraph DMZ["DMZ 20.25.97.0/28"]
+    CAJA["Caja .2"]
+    INV["Inventario .3"]
+    DB["DB .4"]
+  end
+  UPD(["GRP_UPDATES<br/>archive.ubuntu.com<br/>security.ubuntu.com<br/>dl-cdn.alpinelinux.org"])
+  NET(["Internet (resto)"])
+  V20 -->|"SSH, HTTP/HTTPS permitido"| FG
+  V10 -->|"HTTP/HTTPS a Caja permitido<br/>Inventario bloqueado (web filter)"| FG
+  FG --> DMZ
+  DMZ -. "DMZ a VLAN 10/20: DENY" .-> LAN
+  DMZ -->|"SVC_UPDATES permitido"| UPD
+  DMZ -. "DMZ-to-WAN-DENY" .-> NET
