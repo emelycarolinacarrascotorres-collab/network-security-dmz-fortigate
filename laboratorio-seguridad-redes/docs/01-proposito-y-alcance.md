@@ -20,5 +20,4 @@ Demostrar, en un laboratorio GNS3 con FortiGate, que una infraestructura segment
 | 11 | 3 servidores /28 | ✅ | [09](09-servidores.md) |
 | 12 | 2 redes de usuarios /25 con DHCP | ✅ | [10](10-dhcp.md) |
 
-## Alcance
-Entorno virtual (GNS3 + VMware). Solo se documenta lo que existe en las evidencias; lo no evidenciado está en [14 · Hallazgos y pendientes](14-hallazgos-y-pendientes.md).
+
