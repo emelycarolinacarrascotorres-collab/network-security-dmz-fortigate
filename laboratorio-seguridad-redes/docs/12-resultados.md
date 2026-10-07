@@ -27,4 +27,4 @@
 |:-:|:-:|:-:|
 | 19 | 19 | 0 |
 
-Los 12 requisitos del laboratorio están cubiertos ([01](01-proposito-y-alcance.md)). Los hallazgos de endurecimiento y las evidencias faltantes están en [14](14-hallazgos-y-pendientes.md).
+Los 12 requisitos del laboratorio están cubiertos ([01](01-proposito-y-alcance.md)). 
