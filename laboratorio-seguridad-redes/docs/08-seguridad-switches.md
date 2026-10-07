@@ -32,8 +32,7 @@ Las MAC coinciden con los `ip a` de los servidores ([09](09-servidores.md)). Sin
 - `line vty 0 4`: `login local`, `transport input ssh`, `exec-timeout 5 0`. Consola con `exec-timeout 5 0`.
 - `no ip domain-lookup`, banner MOTD de acceso restringido.
 
-## No configurado (no se agrega)
-DHCP Snooping, Dynamic ARP Inspection, `shutdown` de puertos libres, VLAN nativa distinta de 1, `no ip http server`. Ver [14](14-hallazgos-y-pendientes.md).
+
 
 ## Riesgo que reducen
 | Control | Riesgo |
