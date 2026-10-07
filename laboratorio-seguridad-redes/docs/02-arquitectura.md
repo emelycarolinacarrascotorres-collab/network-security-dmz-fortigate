@@ -32,4 +32,4 @@ flowchart LR
   SWD --- S
 ```
 
-Más diagramas: [`diagrams/README.md`](../diagrams/README.md). Inconsistencias de la topología (PC2 ausente, nodo inferior sin etiqueta): ver [14](14-hallazgos-y-pendientes.md).
+Más diagramas: [`diagrams/README.md`](../diagrams/README.md). 
