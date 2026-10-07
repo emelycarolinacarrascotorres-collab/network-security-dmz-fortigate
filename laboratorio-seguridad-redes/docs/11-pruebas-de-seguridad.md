@@ -34,7 +34,6 @@ Formato: origen → destino · servicio · esperado / obtenido · evidencia · c
 | T18 | DMZ → VLAN 10 | servidor DMZ → 20.25.6.11 | ICMP | Bloqueado | 3 enviados / 0 recibidos | ✅ PASS | [captura](../evidence/dmz/dmz-a-vlan10-ping-bloqueado.png) |
 | T19 | DMZ → Internet por HTTPS | servidor DMZ → www.google.com y www.facebook.com | TCP 443 | Bloqueado | `download timed out`, código 1 (×2) | ✅ PASS | [captura](../evidence/dmz/dmz-a-internet-https-bloqueado.png) |
 
-> El servidor origen de T08–T10, T18 y T19 no se identifica en las capturas (T09 se rotula como *server caja*). Detalle y pruebas sugeridas en [14](14-hallazgos-y-pendientes.md).
 
 ## Switches y DHCP
 
