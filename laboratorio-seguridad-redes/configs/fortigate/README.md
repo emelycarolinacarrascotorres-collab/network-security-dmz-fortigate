@@ -10,4 +10,3 @@ por lo que **no existe un `running-config` exportado**. La configuración está 
 | VLAN + DHCP | [`evidence/fortigate/03-subinterfaces-vlan-dhcp.png`](../../evidence/fortigate/03-subinterfaces-vlan-dhcp.png) |
 | Políticas | [`evidence/firewall/01-politicas-firewall.png`](../../evidence/firewall/01-politicas-firewall.png) |
 
-> 📌 **Pendiente (opcional):** exportar el archivo `.conf` desde la GUI (usuario → *Configuration → Backup*) y guardarlo aquí como `fortigate-backup.conf`. Antes de publicarlo, eliminar contraseñas/hashes y claves.
